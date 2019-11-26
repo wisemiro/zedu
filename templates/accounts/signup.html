@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="border rounded register-photo" >
+        <div class="card-body">
+            <form action="{% url 'register'%}" method="post" >
+                {% csrf_token %}
+                <h2 class="text-center"><i class="far fa-user"></i><strong>Register</strong></h2>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="text" name="first_name" for="first_name" placeholder="Registration number" ></div>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="text" name="last_name" for="last_name" placeholder="Lastname"></div>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="text" name="username" for="username" placeholder="Username"></div>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="email" name="email" for="email" placeholder="Email"></div>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="password" name="password" for="password" placeholder="Password"></div>
+                <div class="form-group"><input class="border rounded shadow-sm form-control" type="password" name="password2" for="password2" placeholder="Password Confirm"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a class="already" href="{% url 'login' %}">You already have an account? Login here.</a></form>
+        </div>
+    </div>
+{% endblock %}
