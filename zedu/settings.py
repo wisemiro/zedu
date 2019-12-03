@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'allauth.account',
     'crispy_forms',
+    'rest_framework',
+    'embed_video',
 
     # myapps
 
     'core',
-    'allauth',
+    # 'allauth',
     'imagekit',
     'django.contrib.sites',
     "categories",
@@ -72,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -140,3 +143,31 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+""" 
+email
+"""
+EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST= "smtp.gmail.com"
+EMAIL_HOST_USER= "zedu@gmail.com"
+EMAIL_HOST_PASSWORD= "password"
+EMAIL_PORT= 587
+EMAIL_USE_TLS= True
+DEFAULT_FROM_EMAIL= "zedu@gmail.com"
+
+# """
+# cache
+# """
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#         'LOCATION': '127.0.0.1:11211',
+#     }
+# }
+
+# """ 
+# Session
+# """
+# SESSION_EXPIRE_SECONDS = 300
+# SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True

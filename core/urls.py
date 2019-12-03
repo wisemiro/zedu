@@ -8,5 +8,5 @@ app_name = 'core'
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('Category/<slug>/', CatDetailView.as_view(), name='Cat'),
-    path('Course/<slug>/', CourseDetailView.as_view(), name='course_detail')
+    path('Course/<slug>/', CourseDetailView.as_view(), name='course_detail'),
 ]

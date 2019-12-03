@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 
 from .models import Category, Chapter, CourseItem
+from rest_framework.decorators import api_view
+from rest_framework.decorators import APIView
+
 
 # Create your views here.
 
@@ -36,12 +39,20 @@ this class provides a detail view of selected course
 class CourseDetailView(DetailView):
     model = Chapter
     template_name = "course-details.html"
+    
+    
+"""
+ this will only display ony a specific field in the courseitem model
+"""   
 
-
-# def course_detail(request):
-#     courseitem = CourseItem.objects.all()
-#
-#     context = {
-#         'courseitem': courseitem,
-#     }
-#     return render(request, context, 'courses.html')
+class CourseItem(APIView):
+    
+    def get (self, request):
+        path = str.split(str(request.path), '/')
+        fieldname =path[2]
+        if fieldname == 'title':
+            content={'title' :title.objects.get(pk=path[1]).title}
+            content = {
+                    'fieldname': 'something',
+                }
+            return render (content, 'course-detail.html', request)

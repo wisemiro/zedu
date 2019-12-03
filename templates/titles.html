@@ -1,0 +1,8 @@
+ {% for title in courseitem.all%}
+ <div class="content">
+    <ul class="course_list">
+        <li class="justify-content-between align-items-center d-flex">
+            <p>{{title}}</p>
+            <a class="btn_2 text-uppercase" href="#">View Details</a>
+        </li>
+        {% endfor %}

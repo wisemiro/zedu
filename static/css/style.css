@@ -7286,5 +7286,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-area .btn_1 {
   margin-top: 0px;
 }
-
+main-video{
+position: absolute;
+}
 /*# sourceMappingURL=style.css.map */

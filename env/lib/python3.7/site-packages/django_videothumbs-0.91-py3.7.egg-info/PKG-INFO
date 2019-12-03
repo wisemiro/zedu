@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: django-videothumbs
+Version: 0.91
+Summary: DjangoVideoThumbs
+Home-page: https://github.com/macmichael01/django-videothumbs
+Author: Chris McMichael
+Author-email: macmichael01@gmail.com
+License: BSD
+Description: DjangoVideoThumbs - Videos need thumbnails too
+Keywords: Django Video thumbnails
+Platform: UNKNOWN
